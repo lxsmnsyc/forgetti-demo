@@ -82,39 +82,37 @@ function App() {
               <Heading as="h4" size="md">
                 Notes
               </Heading>
-              <Text>
-                <UnorderedList>
-                  <ListItem>
-                    All implementations are within React. The only difference
-                    with Million implementation is a{' '}
-                    <Link
-                      href="https://github.com/aidenybai/million-demo/blob/53ee4f6c7d86e3f240a637dcf107782045c0c19d/src/times-table.jsx#L49"
-                      isExternal
-                      color="purple"
-                    >
-                      <Code>{'block()'}</Code> wrapper
-                    </Link>{' '}
-                    and the{' '}
-                    <Link
-                      href="https://github.com/aidenybai/million-demo/blob/53ee4f6c7d86e3f240a637dcf107782045c0c19d/src/times-table.jsx#L104"
-                      isExternal
-                      color="purple"
-                    >
-                      <Code>{'<For />'}</Code> component
-                    </Link>
-                    .
-                  </ListItem>
-                  <ListItem>
-                    Every row contains 100 empty <Code>{'<div />'}</Code> nodes
-                    to stimulate diffing in order to measure performance.
-                  </ListItem>
-                  <ListItem>
-                    Should not be used as a benchmark for real-world
-                    applications (this is a very intensive case that isn't
-                    necessarily representative)
-                  </ListItem>
-                </UnorderedList>
-              </Text>
+              <UnorderedList>
+                <ListItem>
+                  All implementations are within React. The only difference
+                  with Million implementation is a{' '}
+                  <Link
+                    href="https://github.com/aidenybai/million-demo/blob/53ee4f6c7d86e3f240a637dcf107782045c0c19d/src/times-table.jsx#L49"
+                    isExternal
+                    color="purple"
+                  >
+                    <Code>{'block()'}</Code> wrapper
+                  </Link>{' '}
+                  and the{' '}
+                  <Link
+                    href="https://github.com/aidenybai/million-demo/blob/53ee4f6c7d86e3f240a637dcf107782045c0c19d/src/times-table.jsx#L104"
+                    isExternal
+                    color="purple"
+                  >
+                    <Code>{'<For />'}</Code> component
+                  </Link>
+                  .
+                </ListItem>
+                <ListItem>
+                  Every row contains 100 empty <Code>{'<div />'}</Code> nodes
+                  to stimulate diffing in order to measure performance.
+                </ListItem>
+                <ListItem>
+                  Should not be used as a benchmark for real-world
+                  applications (this is a very intensive case that isn't
+                  necessarily representative)
+                </ListItem>
+              </UnorderedList>
               <Text>
                 You can adjust the number of rows by using the the number input.
                 Make sure to adjust if you can't see any performance difference

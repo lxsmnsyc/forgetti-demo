@@ -1,5 +1,5 @@
 import { Table, TableContainer, Tbody, Th, Thead, Tr } from '@chakra-ui/react';
-import { block, For } from 'million/react';
+// import { block, For } from 'million/react';
 
 function Row({ product, count, random }) {
   return (
@@ -33,8 +33,6 @@ function Row({ product, count, random }) {
   );
 }
 
-const RowBlock = block(Row);
-
 function TableView({ array, count, mode }) {
   return (
     <TableContainer>
@@ -48,23 +46,9 @@ function TableView({ array, count, mode }) {
           </Tr>
         </Thead>
         <Tbody>
-          {mode === 'million' ? (
-            <For each={array}>
-              {(random) => {
-                return (
-                  <RowBlock
-                    product={count * random}
-                    random={random}
-                    count={count}
-                  />
-                );
-              }}
-            </For>
-          ) : (
-            array.map((random) => (
-              <Row product={count * random} random={random} count={count} />
-            ))
-          )}
+          {array.map((random) => (
+            <Row product={count * random} random={random} count={count} />
+          ))}
         </Tbody>
       </Table>
     </TableContainer>
